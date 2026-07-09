@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franklin Alfredo Cañadas Olmedo · Portafolio</title>
+  <!-- Google Fonts para una tipografía moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a1217;
+      background-image: radial-gradient(circle at 30% 20%, #111d25 0%, #0a1217 80%);
+      color: #89c2c9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* ===== TARJETA PRINCIPAL ===== */
+    .card {
+      background: rgba(17, 29, 37, 0.8);
+      backdrop-filter: blur(4px);
+      border: 1px solid #1e3b42;
+      border-radius: 2rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: #00e5c8;
+      box-shadow: 0 0 40px rgba(0, 229, 200, 0.08);
+    }
+
+    /* ===== SECCIÓN HERO ===== */
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 span {
+      color: #00e5c8;
+    }
+
+    .hero .subtitle {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: #00e5c8;
+      letter-spacing: 0.3px;
+      margin-top: 0.25rem;
+    }
+
+    .hero .divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #00e5c8, #00b4d8);
+      margin: 1rem auto 1.2rem;
+      border-radius: 4px;
+    }
+
+    .hero .bio {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #89c2c9;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* ===== SECCIONES ===== */
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-title .icon {
+      font-size: 1.8rem;
+      color: #00e5c8;
+    }
+
+    /* ===== HABILIDADES ===== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .skill-tag {
+      background: rgba(0, 229, 200, 0.06);
+      border: 1px solid rgba(0, 229, 200, 0.25);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #89c2c9;
+      transition: all 0.25s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .skill-tag:hover {
+      background: rgba(0, 229, 200, 0.12);
+      border-color: #00e5c8;
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 229, 200, 0.15);
+      transform: translateY(-2px);
+    }
+
+    /* ===== PROYECTOS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .project-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #1e3b42;
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.2rem 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+      border-color: rgba(0, 229, 200, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-item h3 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-item p {
+      color: #89c2c9;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      line-height: 1.5;
+    }
+
+    /* ===== CONTACTO ===== */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #1e3b42;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      color: #89c2c9;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+    }
+
+    .contact-link:hover {
+      background: rgba(0, 229, 200, 0.08);
+      border-color: #00e5c8;
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 229, 200, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .contact-link .emoji {
+      font-size: 1.1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(137, 194, 201, 0.4);
+      border-top: 1px solid #1e3b42;
+      padding-top: 1.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      .container {
+        padding: 0;
+      }
+      .card {
+        padding: 1.8rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero .subtitle {
+        font-size: 1rem;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-title {
+        font-size: 1.2rem;
+      }
+      .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .contact-link {
+        justify-content: center;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <!-- ===== HERO ===== -->
+      <section class="hero">
+        <h1>Franklin <span>Alfredo</span> Cañadas <span>Olmedo</span></h1>
+        <p class="subtitle">✦ Administrador de Bases de Datos · Analista de Datos · Desarrollador Backend ✦</p>
+        <div class="divider"></div>
+        <p class="bio">
+          Apasionado por las nuevas tecnologías, la ingeniería y los datos. Actualmente trabajo en <strong>Orodelti S.A.</strong>, 
+          una empresa del sector bananero, donde he liderado proyectos de <strong>Power BI</strong>, automatización de reportes 
+          para el área de compras, desarrollo de dashboards gerenciales para finanzas, y administración de <strong>SAP Business One</strong> , 
+          así como de bases de datos <strong>PostgreSQL y SQL Server</strong> ..
+        </p>
+      </section>
+
+      <!-- ===== STACK TECNOLÓGICO ===== -->
+      <section class="section">
+        <h2 class="section-title">
+          <span class="icon">⚙</span> Stack Tecnológico
+        </h2>
+        <div class="skills">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">Hana SQL</span>
+          <span class="skill-tag">Crystal Reports</span>
+        </div>
+      </section>
+
+      <!-- ===== PROYECTOS ===== -->
+      <section class="section">
+        <h2 class="section-title">
+          <span class="icon">🚀</span> Proyectos
+        </h2>
+        <div class="projects-grid">
+          <div class="project-item">
+            <h3>Dashboard en Tiempo Real</h3>
+            <p>Monitoreo de métricas con WebSockets y gráficas interactivas.</p>
+          </div>
+          <div class="project-item">
+            <h3>AI Content Generator</h3>
+            <p>Generación de textos con OpenAI API y Next.js.</p>
+          </div>
+          <div class="project-item">
+            <h3>Pipeline CI/CD</h3>
+            <p>Automatización de despliegues con GitHub Actions y Docker.</p>
+          </div>
+          <div class="project-item">
+            <h3>Reportes Financieros Automatizados</h3>
+            <p>Extracción y visualización de datos con Power BI y SQL.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACTO ===== -->
+      <section class="section">
+        <h2 class="section-title">
+          <span class="icon">📡</span> Conéctate
+        </h2>
+        <div class="contact-links">
+          <a href="https://github.com/frank1995-coder" class="contact-link"><span class="emoji">🐙</span> GitHub</a>
+          <a href="https://www.linkedin.com/in/franklin-alfredo-ca%C3%B1adas-olmedo-950069161/" class="contact-link"><span class="emoji">🔗</span> LinkedIn</a>
+          <a href="#" class="contact-link"><span class="emoji">✉️</span> Email: frank1995alfredo@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- ===== FOOTER ===== -->
+      <div class="footer">
+        ⚡ Hecho con HTML + CSS · 2026
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
