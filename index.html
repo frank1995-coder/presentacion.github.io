@@ -4,24 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Franklin Cañadas · Portafolio</title>
-  <!-- Vinculamos el CSS externo -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- ===== CANVAS PARA PARTÍCULAS ===== -->
+  <canvas id="particlesCanvas"></canvas>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <div class="container">
     <div class="card">
 
       <!-- ===== PERFIL ===== -->
       <div class="profile">
         <div class="avatar">FC</div>
-        <h1>Franklin <span>Cañadas</span></h1>
+        <h1 id="typingTitle">Franklin <span>Cañadas</span></h1>
         <p class="subtitle">✦ Administrador de BD · Analista de Datos · Backend ✦</p>
         <div class="divider"></div>
         <p class="bio">
-          Apasionado por las nuevas tecnologías, la ingeniería y los datos. 
-          Actualmente trabajo en <strong>Orodelti S.A.</strong>, empresa bananera, 
-          donde he presentado proyectos en <strong>Power BI</strong>, automatización de reportes con <strong>Python</strong> y <strong>SQL</strong>
-          para compras, portes gerenciales de finanzas, administración de 
+          Apasionado por las nuevas tecnologías, la ingeniería y los datos.
+          Actualmente trabajo en <strong>Orodelti S.A.</strong>, empresa bananera,
+          donde he presentado proyectos en <strong>Power BI</strong>, automatización de reportes
+          para compras, desarrollo de reportes gerenciales de finanzas, administración de
           <strong>SAP Business One</strong> y bases de datos <strong>PostgreSQL</strong> y <strong>SQL Server</strong>.
         </p>
       </div>
@@ -71,18 +75,20 @@
           <span class="icon">📡</span> Conéctate
         </div>
         <div class="contact-links">
-          <a href="https://github.com/frank1995-coder" class="contact-btn">🐙 GitHub</a>
-          <a href="https://www.linkedin.com/in/franklin-alfredo-ca%C3%B1adas-olmedo-950069161/" class="contact-btn">🔗 LinkedIn</a>
+          <a href="#" class="contact-btn">🐙 GitHub</a>
+          <a href="#" class="contact-btn">🔗 LinkedIn</a>
           <a href="#" class="contact-btn">✉️ Email</a>
         </div>
       </div>
 
       <!-- ===== FOOTER ===== -->
       <div class="footer">
-        ⚡ Hecho con <span>HTML</span> + <span>CSS</span> · 2026
+        ⚡ Hecho con <span>HTML</span> + <span>CSS</span> + <span>JS</span> · 2026
       </div>
 
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
